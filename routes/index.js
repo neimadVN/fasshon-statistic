@@ -60,6 +60,33 @@ router.post('/checkinCompare', function(req, res, next) {
   });
 });
 //=================================================================
+//=================================================================
+/*
+  shopId=
+  fromDate=2019-05-18
+  toDate=2019-06-16
+*/
+router.get('/statisReviewRateByTime', function(req, res, next) {
+  statistic.reviewRatingByTime({...req.query}).then((results) => {
+    res.send(results);
+  }).catch(err => {
+    res.send(err);
+  });
+});
+
+/*
+  shopIds=[ckxzNzjzsU, ckxzNzjzsU, ckxzNzjzsU, ...]
+  fromDate=2019-05-18
+  toDate=2019-06-16
+*/
+router.post('/statisReviewRateByTime', function(req, res, next) {
+  statistic.reviewRatingByTime({...req.body}).then((results) => {
+    res.send(results);
+  }).catch(err => {
+    res.send(err);
+  });
+});
+//=================================================================
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
