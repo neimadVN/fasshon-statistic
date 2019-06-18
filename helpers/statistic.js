@@ -165,7 +165,7 @@ statis.checkinCompare = (option = {}) => {
         "_id": 0
       }
     },
-    { '$sort': { 'date': 1 } }
+    { '$sort': { 'shop': 1 } }
   ];
 
   if (matcherPipe) {
