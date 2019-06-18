@@ -164,8 +164,7 @@ statis.checkinCompare = (option = {}) => {
         "sum": 1,
         "_id": 0
       }
-    },
-    { '$sort': { 'shop': 1 } }
+    }
   ];
 
   if (matcherPipe) {
